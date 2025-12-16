@@ -4,64 +4,43 @@
 
 ```python
 from TextWidgetLink import TextWidgetLink
-text_widget_link = TextWidgetLink()
+tb_link = TextWidgetLink(textbox)
 
-text_widget_link.add(text_widget=tb, the_text='Complex Numbers:', tag_name='Complex',
-                     new_text='Complex Numbers',
-                     popup_fg='red', popup_bg='lightgreen', popup_border='purple',
-                     the_link='https://en.wikipedia.org/wiki/Complex_number')
-text_widget_link.add(text_widget=tb, the_text='Base Numbers:', tag_name='Base', bg_color='gold',
-                     the_link='https://en.wikipedia.org/wiki/Radix')
-text_widget_link.add(text_widget=tb, the_text='Roman Numbers:', tag_name='Roman',
-                     the_link='https://en.wikipedia.org/wiki/Roman_numerals')
-text_widget_link.add(text_widget=tb, the_text='3.1415927', tag_name='pi',
-                     the_link='https://en.wikipedia.org/wiki/Pi')
-text_widget_link.add(text_widget=tb, the_text='[Email]', new_text='Email',
-                     popup_font=('Courier New', 18), show_url=False,
-                     tag_name='email', the_link='mailto:email_name@email_server')
+tb_link.create(the_text='Complex Numbers:', link_name='Complex',
+                        new_text='Complex Numbers', underline=True,
+                        popup_fg='red', popup_bg='lightgreen', popup_border='purple',
+                        the_link='https://en.wikipedia.org/wiki/Complex_number')
+tb_link.create(the_text='Base Numbers:', link_name='Base', bg_color='gold', underline=True,
+                        fg_color='red', the_link='https://en.wikipedia.org/wiki/Radix')
+tb_link.create(the_text='Roman Numbers:', link_name='Roman', underline=True, popup_bg='sandybrown',
+                        the_link='https://en.wikipedia.org/wiki/Roman_numerals')
+tb_link.create(the_text='3.1415927', link_name='pi',
+                        the_link='https://en.wikipedia.org/wiki/Pi')
+tb_link.create(the_text='[Email]', new_text='Email', show_url=False,
+                        link_name='email', the_link='mailto:name1.nam2@someemailserver')
 ```
 ![Screenshot](https://github.com/Crystalline-Entity/TextboxLink/blob/main/textwidgetlink_messagebox.png)
 <br>
 <h2 align='center'> OPTIONS </h2>
 <div align='left'>
 
-Parameters for the initial call to textwidget_link. These are the defaults for all future calls.
 
-  | **Parameter** | **Description** | **Default** |
-  | --- | --- | --- |
-  | underline | Underline text | True |
-  | underlinefg | Underline colour | 'blue' |
-  | hover_ul | Text colour when mouse hovers over text | 'green' |
-  | hover_bg | Background colour when mouse hovers over text | 'orange' |
-  | fg_color | Highlighted text foreground colour | 'blue' |
-  | bg_color | Highlighted text background colour | 'yellow' |
-  | show_url | Show URL in popup when mouse hovers over highlighted text | True |
-  | popup_fg | Foreground colour of URL popup | 'blue' |
-  | popup_bg | background colour of URL popup | 'lightyellow' |
-  | popup_border | border colour of URL popup |  'red' |
-  | popup_font | URL popup font | ('Code New Roman', 13) |
-
-Parameters for calls to .add to create highlighted text.
-These options are used to over-ride the options from the initial call above. These options apply only to this
-highlight and are not saved.
+Parameters for calls to .create to create the link.
 
   | **Parameter** | **Description** |
   | --- | --- |
-  | text_widget |  The name of the text widget to apply highlights to |
-  | tag_name | The name of the tag to use for this highlight|
   | the_text | The text in the widget to highlight |
+  | link_name | The name to use for this link |
   | the_link | The URL to assign to the text |
   | new_text | Replacement text for the_text. e.g. Text in the messagebox could have quotes for the search, but aren't needed for the link. |
-  | underline | Underline text |
+  | underline | True to underline text |
   | underlinefg | Underline colour |
   | hover_ul | Text colour when mouse hovers over text |
   | hover_bg | Background colour when mouse hovers over text |
   | fg_color | Highlighted text foreground colour |
   | bg_color | Highlighted text background colour |
-  | show_url | Show URL in popup when mouse hovers over highlighted text |
   | popup_fg | Foreground colour of URL popup |
   | popup_bg | background colour of URL popup |
   | popup_border | border colour of URL popup |
   | popup_font | URL popup font, specified as ('family', size) |
-
-To change the default values for future calls, use .config and set the values.
+  | show_url | True or False. If False, no popup will be shown, the URL will not be seen |
