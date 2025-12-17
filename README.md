@@ -7,17 +7,17 @@ from TextWidgetLink import TextWidgetLink
 tb_link = TextWidgetLink(textbox)
 
 tb_link.create(the_text='Complex Numbers:', link_name='Complex',
-                        new_text='Complex Numbers', underline=True,
-                        popup_fg='red', popup_bg='lightgreen', popup_border='purple',
-                        the_link='https://en.wikipedia.org/wiki/Complex_number')
+               new_text='Complex Numbers', underline=True,
+               popup_fg='red', popup_bg='lightgreen', popup_border='purple',
+               the_link='https://en.wikipedia.org/wiki/Complex_number')
 tb_link.create(the_text='Base Numbers:', link_name='Base', bg_color='gold', underline=True,
-                        fg_color='red', the_link='https://en.wikipedia.org/wiki/Radix')
+               fg_color='red', the_link='https://en.wikipedia.org/wiki/Radix')
 tb_link.create(the_text='Roman Numbers:', link_name='Roman', underline=True, popup_bg='sandybrown',
-                        the_link='https://en.wikipedia.org/wiki/Roman_numerals')
+               the_link='https://en.wikipedia.org/wiki/Roman_numerals')
 tb_link.create(the_text='3.1415927', link_name='pi',
-                        the_link='https://en.wikipedia.org/wiki/Pi')
+               the_link='https://en.wikipedia.org/wiki/Pi')
 tb_link.create(the_text='[Email]', new_text='Email', show_url=False,
-                        link_name='email', the_link='mailto:name1.nam2@someemailserver')
+               link_name='email', the_link='mailto:name1.nam2@someemailserver')
 ```
 ![Screenshot](https://github.com/Crystalline-Entity/TextboxLink/blob/main/textwidgetlink_messagebox.png)
 <br>
