@@ -27,20 +27,20 @@ tb_link.create(the_text='[Email]', new_text='Email', show_url=False,
 
 Parameters for calls to .create to create the link.
 
-  | **Parameter** | **Description** |
-  | --- | --- |
-  | the_text | The text in the widget to highlight |
-  | link_name | The name to use for this link |
-  | the_link | The URL to assign to the text |
-  | new_text | Replacement text for the_text. e.g. Text in the messagebox could have quotes for the search, but aren't needed for the link. |
-  | underline | True to underline text |
-  | underlinefg | Underline colour |
-  | hover_ul | Text colour when mouse hovers over text |
-  | hover_bg | Background colour when mouse hovers over text |
-  | fg_color | Highlighted text foreground colour |
-  | bg_color | Highlighted text background colour |
-  | popup_fg | Foreground colour of URL popup |
-  | popup_bg | background colour of URL popup |
-  | popup_border | border colour of URL popup |
-  | popup_font | URL popup font, specified as ('family', size) |
-  | show_url | True or False. If False, no popup will be shown, the URL will not be seen |
+  | **Parameter** | **Description** | ** Default** |
+  | --- | --- | --- |
+  | the_text | The text in the widget to highlight | |
+  | link_name | The name to use for this link | |
+  | the_link | The URL to assign to the text | |
+  | new_text | Replacement text for the_text. e.g. Text in the messagebox could have quotes for the search, but aren't needed for the link. | |
+  | underline | True to underline text | True |
+  | underlinefg | Underline colour | red |
+  | hover_ul | Text colour when mouse hovers over text | green |
+  | hover_bg | Background colour when mouse hovers over text | orange |
+  | fg_color | Highlighted text foreground colour | blue |
+  | bg_color | Highlighted text background colour | yellow |
+  | popup_fg | Foreground colour of URL popup | blue |
+  | popup_bg | background colour of URL popup | palegreen |
+  | popup_border | border colour of URL popup | red |
+  | popup_font | URL popup font, specified as ('family', size) | Code New Roman, 13 |
+  | show_url | True or False. If False, no popup will be shown, the URL will not be seen | True |
